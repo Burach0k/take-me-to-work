@@ -1,0 +1,11 @@
+#header {
+  position: absolute;
+  // max-height: 20vh;
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      margin: 0 5px;
+    }
+  }
+}
