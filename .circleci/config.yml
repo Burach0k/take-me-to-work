@@ -1,7 +1,7 @@
 setImage: &setImage
   docker:
     - image: circleci/node:10-browsers
-  working_directory: ~/repo
+  working_directory: ~/take-me-to-work
 
 setRestore: &setRestore
   restore_cache:
