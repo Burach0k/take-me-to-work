@@ -24,6 +24,7 @@
     "clean-webpack-plugin": "^2.0.1",
     "copy-webpack-plugin": "^5.0.2",
     "firebase": "^5.10.0",
+    "firebase-tools": "^6.7.0",
     "konva": "^3.2.5",
     "prop-types": "^15.6.2",
     "query-string": "^6.4.2",
