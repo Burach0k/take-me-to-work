@@ -24,14 +24,14 @@ a:active {
 }
 #certificate {
   text-align: center;
-  position: relative;
-  left: 8vw;
+  position: absolute;
   -webkit-transform: rotateZ(-10deg);
   -ms-transform: rotateZ(-10deg);
   transform: rotateZ(-10deg);
   z-index: 15;
   background-color: antiquewhite;
-  top: -20px;
+  left: 7vw;
+  top: 45vh;
   min-width: 220px;
   min-height: 100px;
   width: 20vw;
