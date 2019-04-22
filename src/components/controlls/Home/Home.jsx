@@ -1,25 +1,45 @@
-import React from 'react';
-import Cloud from '../../views/Cloud/Cloud'
+import React, { Component } from 'react';
+import Cloud from '../../views/Cloud/Cloud';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { changeAction, closeAction } from '../../../redux/action';
 import './Home.scss';
 
-const Home = () => (
-  <div className='container'>
-    <Cloud />
-    <div className='bird-container bird-container--one'>
-      <div className='bird bird--one' />
-    </div>
+class Home extends Component {
+  componentWillUnmount(){
+    this.props.closeAction();
+  }
+  render() {
+    return (
+      <div className='container'>
+        <Cloud />
+        <div className='bird-container bird-container--one'>
+          <div className='bird bird--one' />
+        </div>
 
-    <div className='bird-container bird-container--two'>
-      <div className='bird bird--two' />
-    </div>
+        <div className='bird-container bird-container--two'>
+          <div className='bird bird--two' />
+        </div>
 
-    <div className='bird-container bird-container--three'>
-      <div className='bird bird--three' />
-    </div>
+        <div className='bird-container bird-container--three'>
+          <div className='bird bird--three' />
+        </div>
 
-    <h1>Hello! I'm Andrey.</h1>
-    <h2>Front-End developer</h2>
-  </div>
-);
+        <h1>Hello! I'm Andrey.</h1>
+        <h2>Front-End developer</h2>
+      </div>
+    );
+  }
+}
+function matchDispatchToProps(dispatch) {
+  return bindActionCreators({ closeAction }, dispatch);
+}
 
-export default Home;
+function mapStateToProps(store) {
+  return {};
+}
+
+export default connect(
+  mapStateToProps,
+  matchDispatchToProps
+)(Home);
