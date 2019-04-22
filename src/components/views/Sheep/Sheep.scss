@@ -4,12 +4,11 @@
 
   animation: load 1s ease-out;
 }
-@mixin container($index, $top, $left) {
+@mixin container($index, $bottom, $left) {
   z-index: $index;
-  position: relative;
+  position: absolute;
   display: inline-block;
-
-  top: $top;
+  bottom: $bottom;
   left: $left;
 }
 @mixin eye($height, $width, $idex, $top, $left, $animation, $delay) {
@@ -30,16 +29,16 @@
 }
 
 .sheep-container1 {
-  @include container(20, -38vh, 20vw);
+  @include container(20, 10vh, 20vw);
 }
 .sheep-container2 {
-  @include container(20, -40vh, 50vw);
+  @include container(20, 20vh, 50vw);
 }
 .sheep-container3 {
-  @include container(20, -44vh, 35vw);
+  @include container(20, 34vh, 35vw);
 }
 .sheep-container4 {
-  @include container(20, -39vh, 22vw);
+  @include container(20, 40vh, 22vw);
 }
 
 .sheep-eye1 {

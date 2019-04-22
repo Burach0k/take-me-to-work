@@ -17,8 +17,8 @@ $section-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
   background-repeat: no-repeat;
   background-color: #5aa267;
 }
-.#{$section-class}:hover{
-  border: solid 15px #62B1D0;
+.#{$section-class}:hover {
+  border: solid 15px #62b1d0;
   box-sizing: border-box;
 }
 .#{$section-class} {
@@ -36,19 +36,19 @@ $section-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
   font-family: 'Dosis', sans-serif;
 
   &:first-child {
-    @include children(0,0,'../../../img/home\ page.png');
+    @include children(0, 0, '../../../img/home\ page.png');
   }
 
   &:nth-child(2) {
-    @include children(0,50%,'../../../img/about\ page.png');
+    @include children(0, 50%, '../../../img/about\ page.png');
   }
 
   &:nth-child(3) {
-    @include children(50%,0,'../../../img/end\ page.png');
+    @include children(50%, 0, '../../../img/end\ page.png');
   }
 
   &:nth-child(4) {
-    @include children(50%,50%,'../../../img/work\ page.png');
+    @include children(50%, 50%, '../../../img/work\ page.png');
   }
 
   &.#{$section-expanded-class} {
@@ -101,7 +101,7 @@ $section-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
   font-size: 2rem;
   font-weight: 300;
 }
-.not-target-section{
+.not-target-section {
   display: none;
-  visibility: hidden;;
+  visibility: hidden;
 }

@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import Cloud from '../../views/Cloud/Cloud';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { changeAction, closeAction } from '../../../redux/action';
+import { closeAction } from '../../../redux/action';
 import './Home.scss';
 
 class Home extends Component {
-  componentWillUnmount(){
+  componentWillUnmount() {
     this.props.closeAction();
   }
   render() {

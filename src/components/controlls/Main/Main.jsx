@@ -6,10 +6,10 @@ class Main extends Component {
   render() {
     return (
       <div className='main'>
-        <Section name = 'Home' link='/home' />
-        <Section name = 'About' link='/about' />
-        <Section name = 'Work' link='/work' />
-        <Section name = 'End' link='/end' />
+        <Section name='Home' link='/home' />
+        <Section name='About' link='/about' />
+        <Section name='Work' link='/work' />
+        <Section name='End' link='/end' />
       </div>
     );
   }

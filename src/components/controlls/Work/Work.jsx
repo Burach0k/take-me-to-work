@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { changeAction, closeAction } from '../../../redux/action';
+import { closeAction } from '../../../redux/action';
 import './Work.scss';
 
 class Work extends Component {
