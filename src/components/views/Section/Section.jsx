@@ -41,7 +41,6 @@ function matchDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(store) {
-  console.log(store,123)
   return {
     class: store.class,
   };

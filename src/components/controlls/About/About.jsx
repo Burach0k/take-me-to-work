@@ -2,10 +2,20 @@ import React, { Component } from 'react';
 import Cloud from '../../views/Cloud/Cloud';
 import Stand from '../../views/Stand/Stand';
 import Sheeps from '../../views/Sheeps/Sheeps';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { changeAction, closeAction } from '../../../redux/action';
 import './About.scss';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class About extends Component {
+  constructor(props){
+    super(props)
+  }
+  componentWillUnmount(){
+   this.props.closeAction();
+  }
+
   render() {
     return (
       <ReactCSSTransitionGroup
@@ -32,4 +42,17 @@ class About extends Component {
   }
 }
 
-export default About;
+
+function matchDispatchToProps(dispatch) {
+  return bindActionCreators({ closeAction }, dispatch);
+}
+
+function mapStateToProps(store) {
+  return { };
+}
+
+export default connect(
+  mapStateToProps,
+  matchDispatchToProps
+)(About);
+
