@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Cloud from '../../views/Cloud/Cloud';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { changeAction,closeAction } from '../../../redux/action';
+import { changeAction, closeAction } from '../../../redux/action';
 import './Home.scss';
 
 class Home extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.props.changeAction('Home');
   }
   componentWillUnmount() {
@@ -35,8 +35,9 @@ class Home extends Component {
     );
   }
 }
+
 function matchDispatchToProps(dispatch) {
-  return bindActionCreators({ closeAction,changeAction }, dispatch);
+  return bindActionCreators({ closeAction, changeAction }, dispatch);
 }
 
 function mapStateToProps(store) {

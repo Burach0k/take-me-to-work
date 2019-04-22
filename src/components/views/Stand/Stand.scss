@@ -12,6 +12,7 @@
     left: 5vw;
     position: absolute;
     width: 25vw;
+    min-width: 300px;
     height: 45vh;
   }
 }
@@ -24,15 +25,17 @@ a:active {
 #certificate {
   text-align: center;
   position: relative;
-  left: 100px;
+  left: 8vw;
   -webkit-transform: rotateZ(-10deg);
   -ms-transform: rotateZ(-10deg);
   transform: rotateZ(-10deg);
   z-index: 15;
   background-color: antiquewhite;
   top: -20px;
-  width: 250px;
-  height: 120px;
+  min-width: 220px;
+  min-height: 100px;
+  width: 20vw;
+  height: 17vh;
   border: solid 6px #ff9773;
 
   animation: list 3s cubic-bezier(0.54, 0.16, 0.56, 0.95) 0s infinite alternate;

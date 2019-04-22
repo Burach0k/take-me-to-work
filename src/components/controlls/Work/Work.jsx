@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { changeAction,closeAction } from '../../../redux/action';
+import { changeAction, closeAction } from '../../../redux/action';
 import './Work.scss';
 
 class Work extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.props.changeAction('Work');
   }
   componentWillUnmount() {
@@ -22,12 +22,12 @@ class Work extends Component {
 }
 
 function matchDispatchToProps(dispatch) {
-  return bindActionCreators({ closeAction,changeAction }, dispatch);
+  return bindActionCreators({ closeAction, changeAction }, dispatch);
 }
 
 function mapStateToProps(store) {
-    console.log(store)
-    return {};
+  console.log(store);
+  return {};
 }
 
 export default connect(

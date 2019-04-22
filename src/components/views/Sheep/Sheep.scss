@@ -30,16 +30,16 @@
 }
 
 .sheep-container1 {
-  @include container(20, 5vh, 20vw, 10);
+  @include container(20, 5vh, 20vw, 13);
 }
 .sheep-container2 {
-  @include container(20, 9vh, 50vw, 12);
+  @include container(20, 9vh, 50vw, 11);
 }
 .sheep-container3 {
-  @include container(20, 12vh, 35vw, 13);
+  @include container(20, 12vh, 35vw, 10);
 }
 .sheep-container4 {
-  @include container(20, 7vh, 60vw,11);
+  @include container(20, 7vh, 60vw,12);
 }
 
 .sheep-eye1 {
