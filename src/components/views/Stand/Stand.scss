@@ -6,13 +6,11 @@
   border-top: solid 1px burlywood;
 }
 #stand {
-  // animation: load 1s ease-out;
   img {
     z-index: 10;
-    top: -60px;
-    position: relative;
-    // min-width: 300px;
-    // min-height: 430px;
+    bottom: 15vh;
+    left: 5vw;
+    position: absolute;
     width: 25vw;
     height: 45vh;
   }
@@ -26,13 +24,13 @@ a:active {
 #certificate {
   text-align: center;
   position: relative;
-  left: 40px;
+  left: 100px;
   -webkit-transform: rotateZ(-10deg);
   -ms-transform: rotateZ(-10deg);
   transform: rotateZ(-10deg);
   z-index: 15;
   background-color: antiquewhite;
-  top: -320px;
+  top: -20px;
   width: 250px;
   height: 120px;
   border: solid 6px #ff9773;

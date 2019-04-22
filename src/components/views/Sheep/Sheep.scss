@@ -4,12 +4,13 @@
 
   animation: load 1s ease-out;
 }
-@mixin container($index, $bottom, $left) {
+@mixin container($index, $bottom, $left, $z) {
   z-index: $index;
   position: absolute;
   display: inline-block;
   bottom: $bottom;
   left: $left;
+  z-index: $z;
 }
 @mixin eye($height, $width, $idex, $top, $left, $animation, $delay) {
   background-color: azure;
@@ -29,16 +30,16 @@
 }
 
 .sheep-container1 {
-  @include container(20, 10vh, 20vw);
+  @include container(20, 5vh, 20vw, 10);
 }
 .sheep-container2 {
-  @include container(20, 20vh, 50vw);
+  @include container(20, 9vh, 50vw, 12);
 }
 .sheep-container3 {
-  @include container(20, 34vh, 35vw);
+  @include container(20, 12vh, 35vw, 13);
 }
 .sheep-container4 {
-  @include container(20, 40vh, 22vw);
+  @include container(20, 7vh, 60vw,11);
 }
 
 .sheep-eye1 {
