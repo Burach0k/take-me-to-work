@@ -4,11 +4,15 @@ import Stand from '../../views/Stand/Stand';
 import Sheeps from '../../views/Sheeps/Sheeps';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { closeAction } from '../../../redux/action';
+import {changeAction, closeAction } from '../../../redux/action';
 import './About.scss';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class About extends Component {
+  constructor(props){
+    super(props)
+    this.props.changeAction('About');
+  }
   componentWillUnmount() {
     this.props.closeAction();
   }
@@ -40,7 +44,7 @@ class About extends Component {
 }
 
 function matchDispatchToProps(dispatch) {
-  return bindActionCreators({ closeAction }, dispatch);
+  return bindActionCreators({ closeAction,changeAction }, dispatch);
 }
 
 function mapStateToProps(store) {
