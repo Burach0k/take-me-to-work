@@ -1,41 +1,12 @@
-export const saveAction = (post) => {
+export const changeAction = (post) => {
   return {
-    type: 'SAVE_ARTICLE',
+    type: 'CHANGE_TARGET_SECTION',
     payload: post,
   };
 };
-
-export const changePage = (post) => {
+export const closeAction = (post) => {
   return {
-    type: 'CHANGE_PAGE',
-    payload: post,
-  };
-};
-
-export const setId = (post) => {
-  return {
-    type: 'SET_ID',
-    payload: post,
-  };
-};
-
-export const targetId = (post) => {
-  return {
-    type: 'TARGET_ID',
-    payload: post,
-  };
-};
-
-export const changeArticlesPage = (post) => {
-  return {
-    type: 'CHANGE_ARTICLSE_PAGE',
-    payload: post,
-  };
-};
-
-export const changeCurrentPage = (post) => {
-  return {
-    type: 'CHANGE_CURRENT_PAGE',
+    type: 'CLOSE_TARGET_SECTION',
     payload: post,
   };
 };

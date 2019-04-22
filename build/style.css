@@ -1,18 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis);
-#about {
-  background-color: royalblue; }
-
-#header {
-  position: absolute; }
-  #header ul {
-    display: flex;
-    list-style: none; }
-    #header ul li {
-      margin: 0 5px; }
-
-#work {
-  background-color: coral; }
-
 #big-cloud {
   margin-top: 90px;
   left: -400px;
@@ -22,7 +8,7 @@
   animation-name: fly-cloud;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-duration: 35s;
+  animation-duration: 50s;
   animation-delay: 1s; }
 
 #small-cloud {
@@ -33,12 +19,260 @@
   animation-name: fly-cloud;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-duration: 50s;
+  animation-duration: 80s;
   animation-delay: 4s; }
 
 @keyframes fly-cloud {
   100% {
     transform: translateY(0vh) translateX(calc(100vw + 300px)); } }
+
+.certificate-line {
+  margin-top: 30px;
+  width: 80px;
+  height: 6px;
+  display: inline-block;
+  border-top: solid 1px burlywood; }
+
+#stand {
+  animation: load 1s ease-out; }
+  #stand img {
+    z-index: 10;
+    top: -60px;
+    position: relative;
+    width: 25vw;
+    height: 45vh; }
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none; }
+
+#certificate {
+  text-align: center;
+  position: relative;
+  left: 40px;
+  -webkit-transform: rotateZ(-10deg);
+  -ms-transform: rotateZ(-10deg);
+  transform: rotateZ(-10deg);
+  z-index: 15;
+  background-color: antiquewhite;
+  top: -320px;
+  width: 250px;
+  height: 120px;
+  border: solid 6px #ff9773;
+  animation: list 3s cubic-bezier(0.54, 0.16, 0.56, 0.95) 0s infinite alternate; }
+
+#bookmark {
+  position: relative;
+  color: #ff4040;
+  left: -68px;
+  top: 18px;
+  animation: stamp 3s cubic-bezier(0.54, 0.16, 0.56, 0.95) 0s infinite alternate; }
+
+#stamp {
+  position: relative;
+  top: 8px;
+  left: -50px;
+  color: #ff4040;
+  height: 25px;
+  width: 25px; }
+
+@keyframes list {
+  from {
+    transform-origin: top;
+    transform: rotate3d(0, 0, 2, -10deg); }
+  to {
+    transform-origin: top;
+    transform: rotate3d(-2, 0, 2, 10deg); } }
+
+@keyframes stamp {
+  from {
+    transform-origin: top;
+    transform: rotate3d(0, 0, 2, 10deg); }
+  to {
+    transform-origin: top;
+    transform: rotate3d(-2, 0, 2, -10deg); } }
+
+@keyframes load {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.eye-container {
+  height: 6px; }
+
+.sheep-container1 {
+  z-index: 20;
+  position: relative;
+  display: inline-block;
+  top: -38vh;
+  left: 20vw; }
+
+.sheep-container2 {
+  z-index: 20;
+  position: relative;
+  display: inline-block;
+  top: -40vh;
+  left: 50vw; }
+
+.sheep-container3 {
+  z-index: 20;
+  position: relative;
+  display: inline-block;
+  top: -44vh;
+  left: 35vw; }
+
+.sheep-container4 {
+  z-index: 20;
+  position: relative;
+  display: inline-block;
+  top: -39vh;
+  left: 22vw; }
+
+.sheep-eye1 {
+  background-color: azure;
+  position: relative;
+  border-radius: 50%;
+  z-index: 25;
+  top: 15px;
+  left: 20px;
+  width: 6px;
+  height: 6px;
+  animation: eye-clip1 3s cubic-bezier(0.54, 0.16, 0.56, 0.95) 5s infinite alternate; }
+
+.sheep-eye2 {
+  background-color: azure;
+  position: relative;
+  border-radius: 50%;
+  z-index: 25;
+  top: 15px;
+  left: 17px;
+  width: 4px;
+  height: 4px;
+  animation: eye-clip2 3s cubic-bezier(0.54, 0.16, 0.56, 0.95) 3s infinite alternate; }
+
+.sheep-eye3 {
+  background-color: azure;
+  position: relative;
+  border-radius: 50%;
+  z-index: 25;
+  top: 15px;
+  left: 66px;
+  width: 4px;
+  height: 4px;
+  animation: eye-clip2 3s cubic-bezier(0.54, 0.16, 0.56, 0.95) 1s infinite alternate; }
+
+.sheep-eye4 {
+  background-color: azure;
+  position: relative;
+  border-radius: 50%;
+  z-index: 25;
+  top: 15px;
+  left: 80px;
+  width: 6px;
+  height: 6px;
+  animation: eye-clip1 3s cubic-bezier(0.54, 0.16, 0.56, 0.95) 2s infinite alternate; }
+
+.sheep1 {
+  width: 120px;
+  height: 90px;
+  animation: load 1s ease-out; }
+
+.sheep2 {
+  width: 90px;
+  height: 70px;
+  animation: load 1s ease-out; }
+
+.sheep3 {
+  width: 80px;
+  height: 65px;
+  animation: load 1s ease-out;
+  transform: scale(-1, 1); }
+
+.sheep4 {
+  width: 100px;
+  height: 75px;
+  animation: load 1s ease-out;
+  transform: scale(-1, 1); }
+
+@keyframes eye-clip1 {
+  0%,
+  85% {
+    top: 15px;
+    height: 6px; }
+  100% {
+    top: 18px;
+    height: 0px; } }
+
+@keyframes eye-clip2 {
+  0%,
+  85% {
+    top: 15px;
+    height: 4px; }
+  100% {
+    top: 17px;
+    height: 0px; } }
+
+@keyframes load {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.about {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh; }
+  .about h2 {
+    font-family: 'Dosis', sans-serif;
+    margin-left: 55vw;
+    text-align: center;
+    width: 30vw;
+    display: inline-block; }
+
+#earth {
+  z-index: 3;
+  position: absolute;
+  bottom: 0px;
+  height: 20vh;
+  width: 100vw;
+  background-color: #74a16a; }
+
+.example-enter {
+  opacity: 0.01; }
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in; }
+
+.example-leave {
+  opacity: 1; }
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in; }
+
+#header ul {
+  display: flex;
+  list-style: none; }
+  #header ul li {
+    margin: 0 5px; }
+
+#work {
+  background-color: coral; }
+
+@keyframes load {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .container {
   z-index: 1;
@@ -52,14 +286,17 @@
   background-position-y: top;
   min-height: 100vh;
   min-width: 100vw;
-  padding: 0; }
-  .container h1, .container h2 {
+  padding: 0;
+  animation: load 2s ease-in 0s; }
+  .container h1,
+  .container h2 {
     position: relative;
     top: 30px;
     font-family: 'Dosis', sans-serif;
     margin: 0 20vw;
     display: block;
-    max-width: 30vw; }
+    max-width: 30vw;
+    animation: load 3s ease-in 0s; }
 
 .bird {
   background-image: url("../../../img//bird.svg");

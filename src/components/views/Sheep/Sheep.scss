@@ -1,0 +1,104 @@
+@mixin sheep($width, $heihgt) {
+  width: $width;
+  height: $heihgt;
+
+  animation: load 1s ease-out;
+}
+@mixin container($index, $top, $left) {
+  z-index: $index;
+  position: relative;
+  display: inline-block;
+
+  top: $top;
+  left: $left;
+}
+@mixin eye($height, $width, $idex, $top, $left, $animation, $delay) {
+  background-color: azure;
+  position: relative;
+  border-radius: 50%;
+  z-index: $idex;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+
+  animation: $animation 3s cubic-bezier(0.54, 0.16, 0.56, 0.95) $delay infinite alternate;
+}
+
+.eye-container {
+  height: 6px;
+}
+
+.sheep-container1 {
+  @include container(20, -38vh, 20vw);
+}
+.sheep-container2 {
+  @include container(20, -40vh, 50vw);
+}
+.sheep-container3 {
+  @include container(20, -44vh, 35vw);
+}
+.sheep-container4 {
+  @include container(20, -39vh, 22vw);
+}
+
+.sheep-eye1 {
+  @include eye(6px, 6px, 25, 15px, 20px, eye-clip1, 5s);
+}
+.sheep-eye2 {
+  @include eye(4px, 4px, 25, 15px, 17px, eye-clip2, 3s);
+}
+
+.sheep-eye3 {
+  @include eye(4px, 4px, 25, 15px, 66px, eye-clip2, 1s);
+}
+.sheep-eye4 {
+  @include eye(6px, 6px, 25, 15px, 80px, eye-clip1, 2s);
+}
+
+.sheep1 {
+  @include sheep(120px, 90px);
+}
+.sheep2 {
+  @include sheep(90px, 70px);
+}
+.sheep3 {
+  @include sheep(80px, 65px);
+  transform: scale(-1, 1);
+}
+.sheep4 {
+  @include sheep(100px, 75px);
+  transform: scale(-1, 1);
+}
+
+@keyframes eye-clip1 {
+  0%,
+  85% {
+    top: 15px;
+    height: 6px;
+  }
+  100% {
+    top: 18px;
+    height: 0px;
+  }
+}
+@keyframes eye-clip2 {
+  0%,
+  85% {
+    top: 15px;
+    height: 4px;
+  }
+  100% {
+    top: 17px;
+    height: 0px;
+  }
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

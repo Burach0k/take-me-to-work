@@ -1,3 +1,63 @@
-#about {
-  background-color: royalblue;
+.about {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+
+  h2{
+    font-family: 'Dosis', sans-serif;
+    margin-left: 55vw;
+    text-align: center;
+    width: 30vw;
+    display: inline-block;
+  }
+  
+}
+#earth{
+    z-index: 3;
+    position: absolute;
+  bottom: 0px;
+  height: 20vh;
+  width: 100vw;
+  background-color: #74a16a
+  // animation: load 1.5s ease-out;
+}
+
+// @keyframes load {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+
+
+
+.example-enter {
+  opacity: 0.01;
+}
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+.example-leave {
+  opacity: 1;
+}
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 600ms ease-in;
+}
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
 }

@@ -1,0 +1,107 @@
+$section-class: 'section';
+$section-not-target: 'not-target-section';
+$section-expanded-class: 'is-expanded';
+$section-has-expanded-class: 'has-expanded-item';
+
+$section-colors: #f06060, #fa987d, #72cca7, #10a296;
+
+$section-transition-property: all;
+$section-transition-duration: 600ms;
+$section-transition-timing-function: cubic-bezier(0.4, 0.2, 0, 1);
+
+@mixin children($top, $left, $img) {
+  top: $top;
+  left: $left;
+  background-image: url($img);
+  background-size: 50vw 50vh;
+  background-repeat: no-repeat;
+  background-color: #5aa267;
+}
+.#{$section-class}:hover{
+  border: solid 15px #62B1D0;
+  box-sizing: border-box;
+}
+.#{$section-class} {
+  position: absolute;
+  z-index: 0;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  transform: scale(1);
+  will-change: transform;
+  transition-property: $section-transition-property;
+  transition-duration: $section-transition-duration;
+  transition-timing-function: $section-transition-timing-function;
+
+  font-family: 'Dosis', sans-serif;
+
+  &:first-child {
+    @include children(0,0,'../../../img/home\ page.png');
+  }
+
+  &:nth-child(2) {
+    @include children(0,50%,'../../../img/about\ page.png');
+  }
+
+  &:nth-child(3) {
+    @include children(50%,0,'../../../img/end\ page.png');
+  }
+
+  &:nth-child(4) {
+    @include children(50%,50%,'../../../img/work\ page.png');
+  }
+
+  &.#{$section-expanded-class} {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-size: 100vw 100vh;
+    height: 100%;
+    visibility: hidden;
+  }
+
+  .#{$section-has-expanded-class} &:not(.#{$section-expanded-class}) {
+    transform: scale(0);
+  }
+}
+
+.close-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  visibility: hidden;
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 200ms linear;
+
+  .#{$section-expanded-class} & {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 200ms linear $section-transition-duration;
+  }
+}
+
+.demo-box {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.not-target-section{
+  display: none;
+  visibility: hidden;;
+}

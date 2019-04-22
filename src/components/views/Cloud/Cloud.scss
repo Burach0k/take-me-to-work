@@ -1,0 +1,28 @@
+@mixin cloud($width, $height, $duration, $delay) {
+  width: $width;
+  height: $height;
+  position: relative;
+  animation-name: fly-cloud;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  animation-duration: $duration;
+  animation-delay: $delay;
+}
+
+#big-cloud {
+  margin-top: 90px;
+  left: -400px;
+  @include cloud(200px, 120px, 50s, 1s);
+}
+
+#small-cloud {
+  left: -200px;
+  @include cloud(120px, 70px, 80s, 4s);
+}
+
+@keyframes fly-cloud {
+  100% {
+    transform: translateY(0vh) translateX(calc(100vw + 300px));
+  }
+}

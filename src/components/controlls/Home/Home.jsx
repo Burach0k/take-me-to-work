@@ -1,11 +1,10 @@
 import React from 'react';
+import Cloud from '../../views/Cloud/Cloud'
 import './Home.scss';
 
 const Home = () => (
   <div className='container'>
-    <img src='../../../img/small-cloud.png' id = 'small-cloud' />
-    <img src='../../../img/big-cloud.png' id = 'big-cloud' />
-
+    <Cloud />
     <div className='bird-container bird-container--one'>
       <div className='bird bird--one' />
     </div>
